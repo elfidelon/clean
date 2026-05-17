@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CleanLab Detailing</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+        }
+
+        body {
+            background: #000;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .logo {
+            font-size: 4rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+        }
+
+        .logo span {
+            color: #1e90ff;
+        }
+
+        .subtitle {
+            color: #999;
+            max-width: 600px;
+            line-height: 1.6;
+            margin-bottom: 70px;
+            font-size: 1.1rem;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .card {
+            background: #111;
+            border: 1px solid #222;
+            border-radius: 30px;
+            padding: 40px 30px;
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: #1e90ff;
+        }
+
+        .plan {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .price span {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        ul {
+            list-style: none;
+            margin-bottom: 35px;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+            color: #cfcfcf;
+            font-size: 1rem;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 18px;
+            background: #1e90ff;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            opacity: .85;
+        }
+
+        .pro {
+            border: 1px solid #1e90ff;
+            transform: scale(1.03);
+            box-shadow: 0 0 40px rgba(30, 144, 255, .15);
+        }
+
+        /* FOOTER */
+
+        .footer {
+            background: #050505;
+            border-top: 1px solid #151515;
+            padding: 70px 20px 30px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            align-items: start;
+        }
+
+        .footer h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .footer h3 span {
+            color: #1e90ff;
+        }
+
+        .footer p {
+            color: #777;
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+
+        .footer-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* REDES */
+
+        .social-icons {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+        }
+
+        .social-icons a {
+            width: 48px;
+            height: 48px;
+            background: #111;
+            border: 1px solid #1f1f1f;
+            border-radius: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .3s;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-4px);
+            border-color: #1e90ff;
+        }
+
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+
+        /* COPYRIGHT */
+
+        .footer-bottom {
+            border-top: 1px solid #151515;
+            margin-top: 50px;
+            padding-top: 25px;
+            text-align: center;
+            color: #666;
+            font-size: .9rem;
+        }
+
+        @media(max-width:768px) {
+
+            .logo {
+                font-size: 2.5rem;
+            }
+
+            .price {
+                font-size: 2.5rem;
+            }
+
+            .pro {
+                transform: none;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <h1 class="logo">
+            CLEAN<span>LAB</span>
+        </h1>
+
+        <p class="subtitle">
+            Detailing premium con acabado profesional.
+            Limpieza, protección y brillo de nivel superior.
+        </p>
+
+        <div class="cards">
+
+            <!-- BASICO -->
+            <div class="card">
+
+                <h2 class="plan">Básico</h2>
+
+                <div class="price">
+                    $200
+                    <span>MXN</span>
+                </div>
+
+                <ul>
+                    <li>Lavado exterior</li>
+                    <li>Aspirado interior</li>
+                    <li>lavado de cristal</li>
+                    <li>.</li>
+                </ul>
+
+                <button class="btn" onclick="contactar('Basico')">
+                    Contactar
+                </button>
+
+            </div>
+
+            <!-- PRO -->
+            <div class="card pro">
+
+                <h2 class="plan">Pro</h2>
+
+                <div class="price">
+                    $550
+                    <span>MXN</span>
+                </div>
+
+                <ul>
+                    <li>Lavado exterior</li>
+                    <li>Lavado interior profundo</li>
+                    <li>Aspirado interior profundo</li>
+                    <li>lavado de cristal</li>
+
+                </ul>
+
+                <button class="btn" onclick="contactar('Pro')">
+                    Contactar
+                </button>
+
+            </div>
+
+            <!-- MAX -->
+            <div class="card">
+
+                <h2 class="plan">Max</h2>
+
+                <div class="price">
+                    $1200
+                    <span>MXN</span>
+                </div>
+
+                <ul>
+                    <li>lavado exterior</li>
+                    <li>lavado interior profundo</li>
+                    <li>Aspirado interior profundo</li>
+                    <li>lavado en zona de motor</li>
+                    <li>limpieza de cristal quita gotas</li>
+                </ul>
+
+                <button class="btn" onclick="contactar('Max')">
+                    Contactar
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- MARCA -->
+            <div class="footer-brand">
+
+                <h3>CLEAN<span>LAB</span></h3>
+
+                <p>
+                    Detailing premium con acabados profesionales y atención personalizada.
+                </p>
+
+            </div>
+
+            <!-- TEXTO -->
+            <div class="footer-info">
+
+                <p>
+                    Todos los servicios se realizan bajo previa cita y evaluación del vehículo.
+                </p>
+
+                <p>
+                    Tu información personal y datos de contacto están protegidos.
+                </p>
+
+                <p>
+                    Los tiempos y resultados pueden variar según el estado del vehículo.
+                </p>
+
+                <p>
+                    Buscamos la máxima satisfacción y calidad en cada servicio.
+                </p>
+
+            </div>
+
+            <!-- REDES -->
+            <div class="footer-social">
+
+                <div class="social-icons">
+
+                    <!-- INSTAGRAM -->
+                    <a href="https://instagram.com/cleanlab.mx" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+                    </a>
+
+                    <!-- TIKTOK -->
+                    <a href="https://tiktok.com/@cleanlab.mx" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
+                    </a>
+
+                    <!-- FACEBOOK -->
+                    <a href="https://facebook.com/cleanlab.mx" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 CleanLab Detailing. Todos los derechos reservados.
+        </div>
+
+    </footer>
+
+    <script>
+
+        function contactar(plan) {
+
+            const numero = "5214770000000";
+
+            const mensaje =
+                `Hola, me interesa el paquete ${plan} de CleanLab`;
+
+            const url =
+                `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+            window.open(url, "_blank");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
