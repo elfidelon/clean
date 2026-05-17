@@ -66,7 +66,7 @@
         }
 
         .card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-10px) scale(1.02);
             border-color: #1e90ff;
         }
 
@@ -117,7 +117,6 @@
 
         .pro {
             border: 1px solid #1e90ff;
-            transform: scale(1.03);
             box-shadow: 0 0 40px rgba(30, 144, 255, .15);
         }
 
@@ -385,11 +384,12 @@
         function contactar(plan) {
 
             const numero = "5214776191070";
-
             const mensaje =
-                `Hola me intersa el servicio`;
+
+                `Hola, me interesa el paquete ${plan} de CleanLab`;
 
             const url =
+
                 `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
 
             window.open(url, "_blank");
