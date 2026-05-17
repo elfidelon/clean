@@ -315,39 +315,6 @@
 
         <div class="footer-container">
 
-            <!-- MARCA -->
-            <div class="footer-brand">
-
-                <h3>CLEAN<span>LAB</span></h3>
-
-                <p>
-                    Detailing premium con acabados profesionales y atención personalizada.
-                </p>
-
-            </div>
-
-            <!-- TEXTO -->
-            <div class="footer-info">
-
-                <p>
-                    Todos los servicios se realizan bajo previa cita y evaluación del vehículo.
-                </p>
-
-                <p>
-                    Tu información personal y datos de contacto están protegidos.
-                </p>
-
-                <p>
-                    Los tiempos y resultados pueden variar según el estado del vehículo.
-                </p>
-
-                <p>
-                    Buscamos la máxima satisfacción y calidad en cada servicio.
-                </p>
-
-            </div>
-
-            <!-- REDES -->
             <div class="footer-social">
 
                 <div class="social-icons">
@@ -369,6 +336,38 @@
 
                 </div>
 
+                <!-- MARCA -->
+                <div class="footer-brand">
+
+                    <h3>CLEAN<span>LAB</span></h3>
+
+                    <p>
+                        Detailing premium con acabados profesionales y atención personalizada.
+                    </p>
+
+                </div>
+
+                <!-- TEXTO -->
+                <div class="footer-info">
+
+                    <p>
+                        Todos los servicios se realizan bajo previa cita y evaluación del vehículo.
+                    </p>
+
+                    <p>
+                        Tu información personal y datos de contacto están protegidos.
+                    </p>
+
+                    <p>
+                        Los tiempos y resultados pueden variar según el estado del vehículo.
+                    </p>
+
+                    <p>
+                        Buscamos la máxima satisfacción y calidad en cada servicio.
+                    </p>
+
+                </div>
+
             </div>
 
         </div>
@@ -384,13 +383,8 @@
         function contactar(plan) {
 
             const numero = "5214776191070";
-            const mensaje =
-
-                `Hola, me interesa el paquete ${plan} de CleanLab`;
-
-            const url =
-
-                `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+            const mensaje = `Hola, me interesa el paquete ${plan} de CleanLab`;
+            const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
 
             window.open(url, "_blank");
 
